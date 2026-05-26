@@ -1,0 +1,20 @@
+# Python
+backend/venv/
+*.pyc
+__pycache__/
+.env
+.env.*
+
+# Node
+frontend/node_modules/
+frontend/dist/
+**/npm-debug.log*
+package-lock.json
+
+# OS
+.DS_Store
+.vscode/
+.idea/
+
+# Logs
+*.log

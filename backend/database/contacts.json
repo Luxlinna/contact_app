@@ -1,0 +1,107 @@
+[
+  {
+    "id": "1b3f6602-095b-406c-a246-22ff3761852e",
+    "company_name": null,
+    "first_name": "Buyer",
+    "last_name": "Sale",
+    "email": "ylinna168@gmail.com",
+    "phone": "0707386756",
+    "message_subject": "Support",
+    "working_days": "fri, 9 am",
+    "notes": "support teams",
+    "favorite": true,
+    "contact_info": [
+      {
+        "type": "email",
+        "value": "ylinna168@gmail.com"
+      },
+      {
+        "type": "phone",
+        "value": "0707386756"
+      }
+    ],
+    "addresses": [
+      {
+        "type": "home",
+        "street": "Levertinsgatan 8,",
+        "street_2": "8",
+        "city": "stockholm",
+        "region": null,
+        "postal_code": "112 52",
+        "country": "Sweden"
+      }
+    ],
+    "created_at": "2026-05-26T23:00:58.155726",
+    "updated_at": "2026-05-26T23:00:58.155915"
+  },
+  {
+    "id": "8b5adca8-a999-417b-9a80-72d9ef8cc0dc",
+    "company_name": null,
+    "first_name": "Linna",
+    "last_name": "Doe",
+    "email": "ylinna168@gmail.com",
+    "phone": "0707386756",
+    "message_subject": "Support",
+    "working_days": null,
+    "notes": "Supporter",
+    "favorite": false,
+    "contact_info": [
+      {
+        "type": "email",
+        "value": "ylinna168@gmail.com"
+      },
+      {
+        "type": "phone",
+        "value": "0707386756"
+      }
+    ],
+    "addresses": [
+      {
+        "type": "home",
+        "street": "Levertinsgatan 8,",
+        "street_2": "8",
+        "city": "stockholm",
+        "region": null,
+        "postal_code": "112 52",
+        "country": "Sweden"
+      }
+    ],
+    "created_at": "2026-05-26T23:03:18.130785",
+    "updated_at": "2026-05-26T23:03:18.130799"
+  },
+  {
+    "id": "bfc3b982-dcad-4da7-878a-1cd690fb29ab",
+    "company_name": "Acme Cop",
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "john@example.com",
+    "phone": "0707383361",
+    "message_subject": "Update request",
+    "working_days": "fri, 9 am",
+    "notes": "update request",
+    "favorite": false,
+    "contact_info": [
+      {
+        "type": "email",
+        "value": "john@example.com"
+      },
+      {
+        "type": "phone",
+        "value": "0707383361"
+      }
+    ],
+    "addresses": [
+      {
+        "type": "work",
+        "street": "Levertinsgatan 8,",
+        "street_2": "8",
+        "city": "stockholm",
+        "region": null,
+        "postal_code": "112 52",
+        "country": "Sweden"
+      }
+    ],
+    "created_at": "2026-05-26T23:04:39.232711",
+    "updated_at": "2026-05-26T23:04:39.232756"
+  }
+]
