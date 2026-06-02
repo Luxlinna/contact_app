@@ -1,6 +1,11 @@
 from fastapi import FastAPI
-from routes.contacts import router
 from fastapi.middleware.cors import CORSMiddleware
+from database.db import engine
+from models import db_models
+from routes.contacts import router
+
+# Create all tables on startup
+db_models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
