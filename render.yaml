@@ -21,8 +21,8 @@ services:
           name: contact-app-db
           property: connectionString
 
-  # ── Frontend (React/Vite) ──────────────────────────────────────
-  - type: web
+  # ── Frontend (React/Vite static site) ─────────────────────────
+  - type: static_site
     name: contact-app-frontend
     env: node
     region: oregon
@@ -30,7 +30,7 @@ services:
     branch: main
     rootDir: frontend
     buildCommand: npm install && npm run build
-    startCommand: npx serve dist -l $PORT
+    staticPublishPath: ./dist
     envVars:
       - key: VITE_API_BASE_URL
         sync: false
