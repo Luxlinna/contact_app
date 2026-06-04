@@ -390,8 +390,8 @@ function DashboardLayout() {
   return (
     <div className="flex h-screen overflow-hidden bg-green-50">
 
-      {/* ══════════════ SIDEBAR ══════════════ */}
-      <aside className="relative flex w-14 lg:w-64 shrink-0 flex-col bg-gradient-to-b from-green-950 via-green-950 to-green-900 border-r border-white/5 overflow-hidden transition-all duration-300">
+      {/* ══════════════ SIDEBAR (desktop only) ══════════════ */}
+      <aside className="relative hidden md:flex w-14 lg:w-64 shrink-0 flex-col bg-linear-to-b from-green-950 via-green-950 to-green-900 border-r border-white/5 overflow-hidden transition-all duration-300">
 
         {/* decorative glows */}
         <div className="pointer-events-none absolute -top-16 left-1/2 -translate-x-1/2 h-48 w-48 rounded-full bg-amber-400/10 blur-3xl" />
@@ -524,10 +524,13 @@ function DashboardLayout() {
       </aside>
 
       {/* ══════════════ MAIN ══════════════ */}
-      <main className="flex flex-1 overflow-hidden">
+      <main className="flex flex-1 overflow-hidden pb-16 md:pb-0">
 
         {/* ── Contact list panel ── */}
-        <div className="flex w-72 shrink-0 flex-col border-r border-green-100 bg-white overflow-hidden">
+        <div className={`shrink-0 flex-col border-r border-green-100 bg-white overflow-hidden
+          w-full md:w-72
+          ${rightPanel !== 'welcome' ? 'hidden md:flex' : 'flex'}
+        `}>
 
           {/* header */}
           <div className="border-b border-green-100 px-4 py-4 bg-white">
@@ -602,7 +605,9 @@ function DashboardLayout() {
         </div>
 
         {/* ── Right panel ── */}
-        <div className="flex flex-1 overflow-hidden flex-col">
+        <div className={`flex-1 overflow-hidden flex-col
+          ${rightPanel === 'welcome' ? 'hidden md:flex' : 'flex'}
+        `}>
           {rightPanel === 'form' ? (
             <div className="flex-1 overflow-y-auto bg-green-50 px-8 py-8">
               <div className="mx-auto max-w-xl">
@@ -644,6 +649,41 @@ function DashboardLayout() {
           )}
         </div>
       </main>
+
+      {/* ══════════════ MOBILE BOTTOM NAV ══════════════ */}
+      <nav className="fixed bottom-0 left-0 right-0 md:hidden bg-green-950 border-t border-white/10 flex items-stretch h-16 z-50">
+        <button
+          onClick={() => { setContactFilter('all'); setSelectedContact(null); setRightPanel('welcome'); }}
+          className={`flex-1 flex flex-col items-center justify-center gap-1 text-[10px] font-semibold transition-colors ${
+            contactFilter === 'all' && rightPanel !== 'form' ? 'text-amber-400' : 'text-green-600'
+          }`}
+        >
+          <LayoutGrid size={20} />
+          <span>Contacts</span>
+        </button>
+
+        <button
+          onClick={() => { setContactFilter('favorites'); setSelectedContact(null); setRightPanel('welcome'); }}
+          className={`flex-1 flex flex-col items-center justify-center gap-1 text-[10px] font-semibold transition-colors ${
+            contactFilter === 'favorites' ? 'text-amber-400' : 'text-green-600'
+          }`}
+        >
+          <Star size={20} className={contactFilter === 'favorites' ? 'fill-amber-400' : ''} />
+          <span>Favorites</span>
+        </button>
+
+        <button
+          onClick={openAddForm}
+          className="flex-1 flex flex-col items-center justify-center gap-1 text-[10px] font-semibold transition-colors"
+        >
+          <div className={`flex h-10 w-10 items-center justify-center rounded-2xl transition-colors ${
+            rightPanel === 'form' ? 'bg-amber-400' : 'bg-green-700'
+          }`}>
+            <UserPlus size={18} className="text-white" />
+          </div>
+        </button>
+      </nav>
+
     </div>
   );
 }
