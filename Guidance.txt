@@ -1,0 +1,8 @@
+JSON: http://127.0.0.1:8000/contacts
+
+FastAPI:  http://127.0.0.1:8000/docs#/default/fetch_contacts_contacts_get
+Backend Run: uvicorn main:app --reload
+
+Frontend Run: 
+- npm install
+- npm run dev

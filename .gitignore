@@ -21,3 +21,7 @@ package-lock.json
 
 # Runtime data (do not commit)
 backend/database/contacts.json
+backend/contacts.db
+
+# Claude Code internal
+.claude/
