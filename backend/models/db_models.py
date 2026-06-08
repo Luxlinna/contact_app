@@ -3,6 +3,17 @@ from sqlalchemy.sql import func
 from database.db import Base
 
 
+class ChatMessage(Base):
+    __tablename__ = "chat_messages"
+
+    id = Column(String, primary_key=True, index=True)
+    visitor_name = Column(String, nullable=True)
+    visitor_contact = Column(String, nullable=True)
+    message = Column(String, nullable=False)
+    read = Column(Boolean, default=False)
+    created_at = Column(DateTime, server_default=func.now())
+
+
 class ContactDB(Base):
     __tablename__ = "contacts"
 
