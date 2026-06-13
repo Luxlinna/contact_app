@@ -31,3 +31,5 @@ Use `render.yaml` to deploy both services on Render.
 After Render creates the backend service, replace `https://<your-backend-service>.onrender.com` in `render.yaml` with the actual backend URL.
 
 If you want, I can also add a `netlify.toml` or `vercel.json` version instead.
+
+<!-- VITE_API_BASE_URL = https://contact-app-backend-i2t5.onrender.com -->
