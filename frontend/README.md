@@ -15,6 +15,13 @@ Website URL : https://contact-app-frontend-jxx0.onrender.com/
 
 # React + Vite
 
+Pushed. Render will auto-redeploy your frontend now.
+
+To see the widget working locally while Render deploys, make sure both are running in separate terminals:
+
+Backend: cd ~/PycharmProjects/contact-app/backend && arch -arm64 venv/bin/uvicorn main:app --reload
+Frontend: cd ~/PycharmProjects/contact-app/frontend && npm run dev
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
