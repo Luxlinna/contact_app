@@ -1,3 +1,18 @@
+JSON: http://127.0.0.1:8000/contacts
+
+FastAPI: http://127.0.0.1:8000/docs#/default/fetch_contacts_contacts_get
+
+Backend Run:
+cd ~/PycharmProjects/contact-app/backend
+arch -arm64 venv/bin/uvicorn main:app --reload
+
+Frontend Run:
+
+- npm install
+- npm run dev
+
+Website URL : https://contact-app-frontend-jxx0.onrender.com/
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
